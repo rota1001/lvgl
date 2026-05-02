@@ -1410,6 +1410,17 @@
     #endif
 #endif
 
+/** Driver for tslib touchscreen input */
+#define LV_USE_TSLIB    0
+
+#if LV_USE_TSLIB
+    /** Touchscreen device. Set to the raw input device **/
+    #define LV_TSLIB_TSDEVICE   "/dev/input/event0"
+
+    /** Calibration file. Uses TSLIB default if not set **/
+    #define LV_TSLIB_CALIBRATION    "/etc/pointercal"
+#endif
+
 /* Drivers for LCD devices connected via SPI/parallel port */
 #define LV_USE_ST7735        0
 #define LV_USE_ST7789        0
